@@ -1,0 +1,20 @@
+#app {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: var(--studio-size-1b);
+}
+
+/* Styling for buttons based on studio-pad */
+.button {
+  --studio-surface-color: var(--studio-carbon);
+  --studio-content-color: white;
+  --studio-width: var(--studio-size-2b);
+  --studio-height: calc(var(--studio-size-6u) * 2);
+}
+
+/* Labels for display of slider value */
+.slider-label {
+  --studio-length: var(--studio-size-1b);
+}

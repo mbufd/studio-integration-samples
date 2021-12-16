@@ -1,0 +1,27 @@
+<div class="host">
+    <div class="studio-column">
+        <!-- A simple heading using studio-label -->
+        <studio-label>Studiö Web Components</studio-label>
+        <studio-label>with Vue.js</studio-label>
+        <!-- Using studio-pad as buttons to toggle theme and scale -->
+        <div class="studio-row">
+            <!-- Toggle theme -->
+            <studio-pad class="button" v-on:click="theming.toggleTheme()">Theme
+                <div slot="secondary">Toggle</div>
+            </studio-pad>
+            <!-- Toggle scale -->
+            <studio-pad class="button" v-on:click="theming.toggleScale()">Scale
+                <div slot="secondary">Toggle</div>
+            </studio-pad>
+        </div>
+        <div class="studio-row">
+            <div v-for="(slider, sliderIndex) in sliders" :key="slider.id">
+                <studio-slider end-value="100" step="1" :value="slider.value"
+                    v-on:studio-slider-value="onSliderValue($event, sliderIndex)">
+                    <studio-label slot="label-start" class="slider-label">{{slider.value}}</studio-label>
+                    <studio-axis slot="cursor-range" fit></studio-axis>
+                </studio-slider>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,15 @@
+/* Load the prefered font for the Studiö Web Components */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@600&display=swap');
+
+@import '~studio-web-components/css/studio-base.css';
+@import '~studio-web-components/css/studio-light.css';
+@import '~studio-web-components/css/studio-dark.css';
+@import '~studio-web-components/css/studio-scale-125.css';
+@import '~studio-web-components/css/studio-scale-100.css';
+
+body {
+    /* Use Studiö paper and ink */
+    background-color: var(--studio-paper-30);
+    color: var(--studio-ink-30);
+}

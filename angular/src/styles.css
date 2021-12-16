@@ -1,0 +1,22 @@
+/* Load the prefered font for the Studiö Web Components */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@600&display=swap');
+
+/* 
+Modify the "styles" property in the application build in angular.json to include the following.
+This also brings the css upon which the following are dependent
+    "styles": [
+        "src/styles.css",
+        { "input": "node_modules/studio-web-components/css/studio-css.css", "bundleName": "studio-web-components" },
+        { "input": "node_modules/studio-web-components/css/studio-scale-125.css", "bundleName": "studio-web-components" },
+        { "input": "node_modules/studio-web-components/css/studio-scale-100.css", "bundleName": "studio-web-components" },
+        { "input": "node_modules/studio-web-components/css/studio-light.css", "bundleName": "studio-web-components" },
+        { "input": "node_modules/studio-web-components/css/studio-dark.css", "bundleName": "studio-web-components" }
+    ],
+*/
+
+body {
+    /* Use Studiö paper and ink */
+    background-color: var(--studio-paper-30);
+    color: var(--studio-ink-30);
+}

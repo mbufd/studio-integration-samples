@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Plain JavaScript with Studiö</title>
+    <base href="/">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" type="image/x-icon" href="favicon.png">
+    <!-- Include what we need for Studiö -->
+    <link rel="stylesheet" href="https://studio.frontdynamics.com/latest/dist/css/studio-css.css" />
+    <link rel="stylesheet" href="https://studio.frontdynamics.com/latest/dist/css/studio-scale-100.css" />
+    <link rel="stylesheet" href="https://studio.frontdynamics.com/latest/dist/css/studio-scale-125.css" />
+    <link rel="stylesheet" href="https://studio.frontdynamics.com/latest/dist/css/studio-light.css" />
+    <link rel="stylesheet" href="https://studio.frontdynamics.com/latest/dist/css/studio-dark.css" />
+    <script src="https://studio.frontdynamics.com/latest/dist/lib/studio-web-components.js" type="module"></script>
+    <link rel="stylesheet" href="./index.css" />
+    <script src="./index.js" type="module"></script>
+</head>
+
+<body>
+    <div id="host">
+        <div class="studio-column">
+            <studio-label>Studiö Web Components</studio-label>
+            <studio-label>with plain JS</studio-label>
+            <div class="studio-row">
+                <studio-pad class="button" onclick="theming.toggleTheme();">Theme
+                    <div slot="secondary">Toggle</div>
+                </studio-pad>
+                <studio-pad class="button" onclick="theming.toggleScale();">Scale
+                    <div slot="secondary">Toggle</div>
+                </studio-pad>
+            </div>
+            <div class="studio-row">
+                <studio-slider id="slider0" value="0" end-value="100">
+                    <studio-axis fit slot="cursor-range"></studio-axis>
+                    <studio-label id="label0" class="slider-label" slot="label-start"></studio-label>
+                </studio-slider>
+                <studio-slider id="slider1" value="25" end-value="100">
+                    <studio-axis fit slot="cursor-range"></studio-axis>
+                    <studio-label id="label1" class="slider-label" slot="label-start"></studio-label>
+                </studio-slider>
+                <studio-slider id="slider2" value="50" end-value="100">
+                    <studio-axis fit slot="cursor-range"></studio-axis>
+                    <studio-label id="label2" class="slider-label" slot="label-start"></studio-label>
+                </studio-slider>
+                <studio-slider id="slider3" value="75" end-value="100">
+                    <studio-axis fit slot="cursor-range"></studio-axis>
+                    <studio-label id="label3" class="slider-label" slot="label-start"></studio-label>
+                </studio-slider>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

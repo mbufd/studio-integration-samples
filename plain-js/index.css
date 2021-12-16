@@ -1,0 +1,31 @@
+/* Load the prefered font for the Studiö Web Components */
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bai+Jamjuree:wght@600&display=swap');
+    
+#host {
+    margin-top: var(--studio-size-1b);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* Initially hide until page is loaded - index.js will make visible */
+    visibility: hidden;
+}
+
+/* Use Studiö paper and ink */
+body {
+    background-color: var(--studio-paper-30);
+    color: var(--studio-ink-30);
+}
+  
+/* Styling for buttons based on studio-pad */
+.button {
+    --studio-surface-color: var(--studio-carbon);
+    --studio-content-color: white;
+    --studio-width: var(--studio-size-2b);
+    --studio-height: calc(var(--studio-size-6u) * 2);
+}
+  
+/* Labels for display of slider value */
+.slider-label {
+    --studio-length: var(--studio-size-1b);
+}

@@ -1,0 +1,28 @@
+<div class="studio-column">
+  <!-- A simple heading using studio-label -->
+  <studio-label>Studiö Web Components</studio-label>
+  <studio-label>with Angular</studio-label>
+  <!-- Using studio-pad as buttons to toggle theme and scale -->
+  <div class="studio-row">
+    <!-- Toggle theme -->
+    <studio-pad class="button" (click)="theming.toggleTheme()">Theme
+      <div slot="secondary">Toggle</div>
+    </studio-pad>
+    <!-- Toggle scale -->
+    <studio-pad class="button" (click)="theming.toggleScale()">Scale
+      <div slot="secondary">Toggle</div>
+    </studio-pad>
+  </div>
+  <div class="studio-row">
+    <!-- Using *ngFor to display 4 studio-slider elements -->
+    <div *ngFor="let slider of sliders; let sliderIndex = index;">
+      <studio-slider [value]="slider.value" end-value="100" step="1"
+                     (studio-slider-value)="onSliderValue($event, sliderIndex)">
+        <!-- Display the slider value using studio-label -->
+        <studio-label slot="label-start" class="slider-label">{{slider.value}}</studio-label>
+        <!-- Some tick marks using studio-ruler-->
+        <studio-axis slot="cursor-range" fit></studio-axis>
+      </studio-slider>
+    </div>
+  </div>
+</div>
